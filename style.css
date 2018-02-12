@@ -6,3 +6,8 @@
 .btnRight{
   float:right;
 }
+
+.question {
+	display: none;
+}
+
