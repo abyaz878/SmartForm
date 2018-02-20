@@ -35,9 +35,9 @@
     <div class="row jumbotron question" id="q2">
       <div class="col-sm-10 q2">
         <h2>Choose a front-end technology</h2>
-        <button class="btn btn-lg btn-warning">HTML</button>
-        <button class="btn btn-lg btn-danger">CSS</button>
-        <button class="btn btn-lg btn-info">JavaScript</button>
+        <button class="btn btn-lg btn-warning fet " id = "html">HTML</button>
+        <button class="btn btn-lg btn-danger fet" id = "css">CSS</button>
+        <button class="btn btn-lg btn-info fet" id = "js">JavaScript</button>
       </div>
     </div>
     <!-- Question 2 END -->
@@ -47,22 +47,22 @@
         <p>What do you <strong>like</strong> about HTML?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Learning the basics is trivial
+          <input name="likesHTML" type="checkbox" class = "htmlPos" id = "111"> Learning the basics is trivial
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> No hassle: write code in a text editor and open in Browser
+          <input name="likesHTML" type="checkbox" class = "htmlPos" id = "113"> No hassle: write code in a text editor and open in Browser
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Tags are easy to remember
+          <input name="likesHTML" type="checkbox" class = "htmlPos" id = "113"> Tags are easy to remember
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> HTML5 features like canvas are powerful
+          <input name="likesHTML" type="checkbox" class = "htmlPos" id = "114"> HTML5 features like canvas are powerful
         </label>
         </div>
       </div>
@@ -70,27 +70,27 @@
         <p>What do you <strong>dislike</strong> about HTML?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Difficult to learn
+          <input name="likesHTML" type="checkbox" class = "htmlNeg" id = "121"> Difficult to learn
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Having to close tags is annoying!
+          <input name="likesHTML" type="checkbox" class = "htmlNeg" id = "122"> Having to close tags is annoying!
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Too many tags and attributes to remember
+          <input name="likesHTML" type="checkbox" class = "htmlNeg" id = "123"> Too many tags and attributes to remember
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Code looks pretty messy
+          <input name="likesHTML" type="checkbox" class = "htmlNeg" id = "124"> Code looks pretty messy
         </label>
         </div>
         <div class="btnRight">
-          <button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
-          <button class="btn btn-success">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+          <button class="btn btn-primary" id="htmlPrev"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
+          <button class="btn btn-success" id="htmlNext">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
         </div>
       </div>
     </div>
@@ -101,17 +101,17 @@
         <p>What do you <strong>like</strong> about CSS?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Syntax is easy to learn
+          <input name="likesCSS" type="checkbox"  class = "cssPos" id = "211"> Syntax is easy to learn
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Can be used as an art tool
+          <input name="likesCSS" type="checkbox"  class = "cssPos" id = "212"> Can be used as an art tool
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Enables creativity in web design
+          <input name="likesCSS" type="checkbox"  class = "cssPos" id = "213"> Enables creativity in web design
         </label>
         </div>
       </div>
@@ -119,27 +119,27 @@
         <p>What do you <strong>dislike</strong> about CSS?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Difficult to learn
+          <input name="likesCSS" type="checkbox"  class = "cssNeg" id = "221"> Difficult to learn
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Debugging is a nightmare
+          <input name="likesCSS" type="checkbox"  class = "cssNeg" id = "222"> Debugging is a nightmare
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Conflicts can be very confusing
+          <input name="likesCSS" type="checkbox"  class = "cssNeg" id = "223"> Conflicts can be very confusing
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Code is messy
+          <input name="likesCSS" type="checkbox" class = "cssNeg" id = "224"> Code is messy
         </label>
         </div>
         <div class="btnRight">
-          <button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
-          <button class="btn btn-success">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+          <button class="btn btn-primary" id="cssPrev"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
+          <button class="btn btn-success" id="cssNext">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
         </div>
       </div>
     </div>
@@ -150,22 +150,22 @@
         <p>What do you <strong>like</strong> about JavaScript?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Easy to learn
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "311"> Easy to learn
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Multple programming styles supported
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "312"> Multple programming styles supported
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Just code and run easily in the browser
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "313"> Just code and run easily in the browser
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Huge growing community and plenty of resources online
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "314"> Huge growing community and plenty of resources online 
         </label>
         </div>
       </div>
@@ -173,27 +173,27 @@
         <p>What do you <strong>dislike</strong> about JavaScript?</p>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Difficult to learn
+          <input name="likesJS" type="checkbox" class = "jvsNeg" id = "321"> Difficult to learn
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Multple programming paradigms supported (too many options)
+          <input name="likesJS" type="checkbox"  class = "jvsNeg" id = "322"> Multple programming paradigms supported (too many options)
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> Easy to right messy code
+          <input name="likesJS" type="checkbox" class = "jvsNeg" id = "323"> Easy to right messy code
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesHTML" type="checkbox"> No multi threading
+          <input name="likesJS" type="checkbox"  class = "jvsNeg" id = "324"> No multi threading
         </label>
         </div>
         <div class="btnRight">
-          <button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
-          <button class="btn btn-success">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+          <button class="btn btn-primary" id="jvsPrev"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
+          <button class="btn btn-success" id="jvsNext">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
         </div>
       </div>
     </div>
@@ -201,53 +201,59 @@
     <!-- Question 3 -->
     <div class="row jumbotron question" id="q3">
       <h4>Estimate your front-end skills</h4>
+
       <div class="col-sm-4">
         <span>HTML Strength</span>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Weak"> Weak
+          <input type="radio" name="radio1"value="Weak" checked="checked"> Weak
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Average"> Average
+          <input type="radio" name="radio1"value="Average"> Average
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Good"> Good
+          <input type="radio" name="radio1" value="Good"> Good
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Expert"> Expert
+          <input type="radio" name="radio1" value="Expert"> Expert
         </label>
       </div>
+
       <div class="col-sm-4">
         <span>CSS Strength</span>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Weak"> Weak
+          <input type="radio" name="radio2" value="Weak" > Weak
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Average"> Average
+          <input type="radio" name="radio2" value="Average"> Average
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Good"> Good
+          <input type="radio" name="radio2" value="Good"> Good
         </label>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Expert"> Expert
+          <input type="radio" name="radio2" value="Expert"> Expert
         </label>
       </div>
+
       <div class="col-sm-4">
         <span>JavaScript Strength</span>
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Weak"> Weak
+          <input type="radio" name="radio3" value="Weak"> Weak
         </label>
+
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Average"> Average
+          <input type="radio" name="radio3" value="Average"> Average
         </label>
+
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Good"> Good
+          <input type="radio" name="radio3" value="Good"> Good
         </label>
+
         <label class="radio">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Expert"> Expert
+          <input type="radio" name="radio3" value="Expert"> Expert
         </label>
         <div class="btnRight">
-          <button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
-          <button class="btn btn-success">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+          <button class="btn btn-primary" id="q3Prev"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
+          <button class="btn btn-success" id="q3Next">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
         </div>
       </div>
     </div>
@@ -256,13 +262,19 @@
     <div class="jumbotron question" id="thanks">
       <h1>Thank You!</h1>
       <p>Your Front-end Technology Survey answers were submitted successfully.</p>
-      <p><button class="btn btn-default btn-lg">View Answers</button> <button class="btn btn-danger">Delete Answers</button></p>
+      <p><button class="btn btn-default btn-lg" id="viewAns">View Answers</button> <button class="btn btn-danger" id="delAns">Delete Answers</button></p>
     </div>
     <!-- Thank you END-->
     <!-- Show answers in new view (div)
     -
     -
     -->
+
+  <div class="jumbotron" id="showRes">
+      <h1>Your Answers!</h1>
+      <p class = "resultCon"></p>
+    </div>
+
   </div>
 
   <script type="text/javascript" src="vendor/jquery-3.1.1.min.js"></script>
