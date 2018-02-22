@@ -11,7 +11,7 @@ var userData = {
 	htmlSkill: null,	//
 	cssSkill: null,	//
 	jsSkill: null, //
-	position: "welcome"	// 19:35 WHAT IS THIS FOR???
+	position: "welcome"	
 };
 
 var strUserData;
@@ -47,8 +47,8 @@ function validateName(name){
 
 $('#start').click(function(){
 	console.log("start");
-	$('#welcome').hide();
-	$('#q1').show(); 
+	$('#welcome').fadeOut("fast");
+	$('#q1').fadeToggle("slow"); 
 	userData.currentQuestion = "#q1";
 	localStorage.setItem('userData',JSON.stringify(userData));
 
@@ -69,8 +69,8 @@ $('#q1next').click(function(event){
 			localStorage.setItem("lPos", userData.position);// position
 			localStorage.setItem("lObj", strUserData);
 
-			$("#q1").hide();	// hide the element on display
-			$("#q2").show(); // show the follwing hidden element by-
+			$("#q1").fadeOut("slow");	// hide the element on display
+			$("#q2").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 
 		else{
@@ -104,22 +104,22 @@ $(".fet").click(function(event){	// any of the FrontEndTechnology clicked
 		var chosen = $(this).text();	// know the one chosen
 
 		if(chosen == "HTML"){
-			$("#q2").hide();	// hide the element on display
+			$("#q2").fadeOut("slow");	// hide the element on display
 			userData.position = "q2a";
 			localStorage.setItem("lPos", userData.position);// position
-			$("#q2a").show(); // show the follwing hidden element by-
+			$("#q2a").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 		else if(chosen == "CSS") {
-			$("#q2").hide();	// hide the element on display
+			$("#q2").fadeOut("slow");	// hide the element on display
 			userData.position = "q2b";
 			localStorage.setItem("lPos", userData.position);// position
-			$("#q2b").show(); // show the follwing hidden element by-
+			$("#q2b").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 		else{
 			$("#q2").hide();	// hide the element on display
 			userData.position = "q2c";
 			localStorage.setItem("lPos", userData.position);// position
-			$("#q2c").show(); // show the follwing hidden element by-
+			$("#q2c").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 	});
 
@@ -172,20 +172,20 @@ $("#htmlPrev").click(function(event){	// 00:05 this is okay
 					//console.log("strUserData " + strUserData);
 
 			 // able the button,  followed by
-			 $("#q2a").hide();	// hide the element on display
+			 $("#q2a").fadeOut("slow");	// hide the element on display
 			 userData.position = "q2";
 			 localStorage.setItem("lPos", userData.position);// position
 
 			 strUserData = JSON.stringify(userData);
 			 localStorage.setItem("lObj", strUserData);
-			 $("#q2").show(); // show the follwing hidden element by-
+			 $("#q2").fadeToggle("slow"); // show the follwing hidden element by-
 		 }
 	});
 
 $("#htmlNext").click(function(event){	// 10:37
 		var eyeD, i, temp, found = false;
 		userData.html = [];
-		//userData.html = [];
+		
 
 		for(i = 111; i <=114; i++)	// push the response if they are selected
 		{
@@ -235,16 +235,16 @@ $("#htmlNext").click(function(event){	// 10:37
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
 
-			$("#q2a").hide();	// hide the element on display
-			$("#q3").show(); // show the follwing hidden element by-
+			$("#q2a").fadeOut("slow");	// hide the element on display
+			$("#q3").fadeToggle("slow"); // show the follwing hidden element by-
 		}else{
-			$('#q2a').hide();
+			$('#q2a').fadeOut("slow");
 			userData.position = "q2";
 			localStorage.setItem("lPos", userData.position);// position
 
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
-			$('#q2').show();
+			$('#q2').fadeToggle("slow");
 		}
 	});
 
@@ -302,8 +302,8 @@ $("#cssPrev").click(function(event){	// 10:49
 			localStorage.setItem("lObj", strUserData);
 
 
-			$("#q2b").hide();	// hide the element on display
-			$("#q2").show(); // show the follwing hidden element by-
+			$("#q2b").fadeOut("slow");	// hide the element on display
+			$("#q2").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 	});
 
@@ -363,18 +363,18 @@ $("#cssPrev").click(function(event){	// 10:49
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
 
-			$("#q3").show(); // show the follwing hidden element by-
+			$("#q3").fadeToggle("slow"); // show the follwing hidden element by-
 		}else{
 			strUserData = JSON.stringify(userData);
 			console.log("strUserData " + strUserData);
 
-			$('#q2b').hide();
+			$('#q2b').fadeOut("slow");
 			userData.position = "q2";
 			localStorage.setItem("lPos", userData.position);// position
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
 
-			$('#q2').show();
+			$('#q2').fadeToggle("slow");
 		}
 
 	});
@@ -426,11 +426,11 @@ $("#cssPrev").click(function(event){	// 10:49
 			console.log("strUserData " + strUserData);
 
 			// able the button,  followed by
-			$("#q2c").hide();	// hide the element on display
+			$("#q2c").fadeOut("slow");	// hide the element on display
 			userData.position = "q2";
 			localStorage.setItem("lPos", userData.position);// position
 			localStorage.setItem("lObj", strUserData);
-			$("#q2").show(); // show the follwing hidden element by-
+			$("#q2").fadeToggle("slow"); // show the follwing hidden element by-
 		}
 	});	// 19:06 works
 
@@ -496,8 +496,8 @@ $("#cssPrev").click(function(event){	// 10:49
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
 
-			$('#q2c').hide();
-			$('#q2').show();
+			$('#q2c').fadeOut("slow");
+			$('#q2').fadeToggle("slow");
 		}
 	});
 
@@ -510,8 +510,8 @@ $("#cssPrev").click(function(event){	// 10:49
 		 localStorage.setItem("lObj", strUserData);
 		 strUserData = JSON.stringify(userData);
 
-		 $("#q3").hide();
-		 $("#q2").show();
+		 $("#q3").fadeOut("slow");
+		 $("#q2").fadeToggle("slow");
 	});
 
 	$("#q3Prev").click(function(event){
@@ -536,8 +536,8 @@ $("#cssPrev").click(function(event){	// 10:49
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
  		  //console.log("strUserData " + strUserData);
-		  $("#q3").hide();
-			$("#q2").show();
+		  $("#q3").fadeOut("slow");
+			$("#q2").fadeToggle("slow");
 		}
 		else{
 			alert("Make sure you have chosen your expertise for HTML, CSS, and JavaScript.");
@@ -567,27 +567,45 @@ $("#cssPrev").click(function(event){	// 10:49
 			strUserData = JSON.stringify(userData);
 			localStorage.setItem("lObj", strUserData);
 
-			$("#q3").hide();
-			$("#thanks").show();
+			$("#q3").fadeOut("slow");
+			$("#thanks").fadeToggle("slow");
 		}
 		else{
 			alert("Make sure you have chosen your expertise for HTML, CSS, and JavaScript.");
 		}
 	});
 
+    $('#ans_prev').click(function()
+    {
+    userData.currentQuestion='#thanks';
+    localStorage.setItem('userData',JSON.stringify(userData));
+    $('#q4').fadeOut("slow");
+    $('#thanks').fadeToggle("slow");
+});
+
+
+
 	$("#viewAns").click(function(event){
-		userData.position = "showRes";
-		localStorage.setItem("lPos", userData.position);// position
-		strUserData = JSON.stringify(userData);
-		localStorage.setItem("lObj", strUserData);
+		
+
+		labelText = $("#myLabel").text()
 
 
+    document.getElementById("likesHTML").innerHTML=userData.html.toString();
 
-		$("#thanks").hide();
-		$("#showRes").show();
-		alert("HTML skill" + userData.htmlSkill);
-		alert("CSS skill" + userData.cssSkill);
-		alert("JS skill" + userData.jsSkill);
+     document.getElementById("likesCSS").innerHTML=userData.css.toString();
+     document.getElementById("likesJS").innerHTML=userData.js.toString();
+     document.getElementById("radio1").innerHTML="Strength: "+userData.htmlSkill.toString();
+     document.getElementById("radio2").innerHTML="Strength: "+userData.cssSkill.toString();
+     document.getElementById("radio3").innerHTML="Strength: "+userData.jsSkill.toString();
+    userData.currentQuestion='#q4';
+    localStorage.setItem('userData',JSON.stringify(userData));
+    
+
+     $('#thanks').fadeOut("slow");
+             
+
+      $('#q4').fadeToggle("slow");
 		
 	});
 
@@ -610,6 +628,6 @@ $("#cssPrev").click(function(event){	// 10:49
 		strUserData = JSON.stringify(userData);
 		localStorage.setItem("lObj", strUserData);
 
-		$("#thanks").hide();
-		$("#welcome").show();
+		$("#thanks").fadeOut("slow");
+		$("#welcome").fadeToggle("slow");
 	});

@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html>
 
+
+
+
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
+
+
+
+
 <head>
   <title>SmartForm</title>
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -150,12 +172,12 @@
         <p>What do you <strong>like</strong> about JavaScript?</p>
         <div class="checkbox">
           <label>
-          <input name="likesJS" type="checkbox" class = "jvsPos" id = "311"> Easy to learn
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "311"> Easy to learn (Answer 311)
         </label>
         </div>
         <div class="checkbox">
           <label>
-          <input name="likesJS" type="checkbox" class = "jvsPos" id = "312"> Multple programming styles supported
+          <input name="likesJS" type="checkbox" class = "jvsPos" id = "312"> Multple programming styles supported (Answer312)
         </label>
         </div>
         <div class="checkbox">
@@ -265,13 +287,46 @@
       <p><button class="btn btn-default btn-lg" id="viewAns">View Answers</button> <button class="btn btn-danger" id="delAns">Delete Answers</button></p>
     </div>
     <!-- Thank you END-->
+
     <!-- Show answers in new view (div)
     -
     -
     -->
 
-  <div class="jumbotron" id="showRes">
-      <h1>Your Answers!</h1>
+      <div class="jumbotron  question" id="q4">
+         
+      <h1>Your Answers are following:</h1>
+           <p ><b>Your views about HTML:</b></p>               
+           <p id="likesHTML"></p>
+           <p id="radio1" class="str"></p>
+              <hr>
+           <p><b>Your views about CSS:</b></p>
+           <p id="likesCSS"></p>
+           <p id="radio2" class="str"></p>
+              <hr>
+           <p><b>Your views about Javascript:</b></p>
+           <p id="likesJS"></p>
+           <p id="radio3" class="str"></p>
+           <div class="btnRight">
+            <button class="btn btn-primary" id="ans_prev"><span class="glyphicon glyphicon-chevron-left" ></span> Previous</button>
+            
+           </div>
+            
+            <script type="text/javascript">
+
+
+              
+             var x=JSON.parse(localStorage.userData);
+             document.getElementById("likesHTML").innerHTML=x.html.toString();
+             document.getElementById("likesCSS").innerHTML=x.css.toString();
+             document.getElementById("likesJS").innerHTML=x.js.toString();
+             document.getElementById("radio1").innerHTML="Strength: "+x.htmlSkill.toString();
+             document.getElementById("radio2").innerHTML="Strength: "+x.cssSkill.toString();
+             document.getElementById("radio3").innerHTML="Strength: "+x.jsSkill.toString();
+
+
+            </script>
+
       <p class = "resultCon"></p>
     </div>
 
